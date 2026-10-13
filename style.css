@@ -1,0 +1,235 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b1120;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #111827, #312e81);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+header h1 {
+    font-size: clamp(32px, 6vw, 48px);
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #cbd5e1;
+}
+
+nav {
+    background: #111827;
+    text-align: center;
+    padding: 16px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #273449;
+}
+
+nav a {
+    display: inline-block;
+    color: #e2e8f0;
+    text-decoration: none;
+    margin: 5px 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+section {
+    background: #111827;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 28px;
+    border: 1px solid #273449;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    scroll-margin-top: 85px;
+    animation: fadeIn 0.6s ease;
+}
+
+h2 {
+    color: #a78bfa;
+    margin-top: 0;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+input,
+textarea {
+    background: #0b1120;
+    color: #e2e8f0;
+}
+
+#message,
+#greeting {
+    text-align: center;
+    color: #c4b5fd;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: 2px solid #8b5cf6;
+    border-color: transparent;
+}
+
+#contactForm button {
+    margin: 10px 0 0;
+}
+
+label {
+    color: #cbd5e1;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 45px 16px;
+    }
+
+    nav a {
+        margin: 5px 7px;
+        font-size: 14px;
+    }
+
+    section {
+        margin: 18px 12px;
+        padding: 20px;
+    }
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #a78bfa;
+    display: block;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 25px rgba(167, 139, 250, 0.3);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.project-card {
+    background: #0b1120;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.project-card h3 {
+    color: #c4b5fd;
+    margin-top: 0;
+}
+
+.project-card p {
+    color: #cbd5e1;
+}
+
+.project-card span {
+    display: inline-block;
+    color: #a5b4fc;
+    background: #1e1b4b;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.skill {
+    margin: 22px 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+    color: #e2e8f0;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #273449;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #a78bfa);
+    border-radius: 10px;
+    transition: width 1.2s ease;
+}
